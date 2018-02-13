@@ -4,11 +4,13 @@ from twython import TwythonStreamer, Twython , TwythonError
 
 
 #Twitter app auth
-APP_KEY = ''
-APP_SECRET = ''
-OAUTH_TOKEN = ''
+APP_KEY = '<>'
+APP_SECRET = '<>'
+OAUTH_TOKEN = '<>'
 OAUTH_TOKEN_SECRET = ''
 
+#sleep time between checks to avoid RT rate limits
+sleeptime = 5000
 #Let's gather a list of words we DON'T want to RT
 naughty_words = ["CPU", "TEMP", "courses", "hiring", "load average", "Temperature and humidity sensor", "Comunidade"]
 #And a list of words we WOULD like to RT
@@ -38,6 +40,6 @@ while (True):
 				twitter.retweet(id = tweet["id_str"])
 			except TwythonError as e:
 				print e
-		time.sleep(1000)
+		time.sleep(sleeptime)
 	except TwythonError as e:
 		print e
