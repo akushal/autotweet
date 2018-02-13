@@ -1,9 +1,9 @@
 # autotweet
-Auto Tweet on tweeter based on certain keywords
+Auto Tweet on Twitter based on certain keywords
 
 # Requirements 
  - Docker
- - Tweeter API keys
+ - Twitter API keys
 
 # Installation
  - Clone repository
